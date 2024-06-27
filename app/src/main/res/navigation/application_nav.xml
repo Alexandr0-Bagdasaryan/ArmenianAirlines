@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.armenianairlines.presentation.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/application_nav"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginSignFragment"
+            app:destination="@id/loginSignFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/application_nav"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.armenianairlines.presentation.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_loginSignFragment"
+            app:destination="@id/loginSignFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/application_nav"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_menuFragment_to_flightDetailFragment"
+            app:destination="@id/flightDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSignFragment"
+        android:name="com.example.armenianairlines.presentation.LoginSignFragment"
+        android:label="fragment_login_sign"
+        tools:layout="@layout/fragment_login_sign" >
+        <action
+            android:id="@+id/action_loginSignFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_enter_anim"
+            app:popUpTo="@id/application_nav"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.armenianairlines.presentation.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginSignFragment"
+            app:destination="@id/loginSignFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/application_nav"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/flightDetailFragment"
+        android:name="com.example.armenianairlines.presentation.FlightDetailFragment"
+        android:label="fragment_flight_detail"
+        tools:layout="@layout/fragment_flight_detail" >
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_flightDetailFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+
+</navigation>

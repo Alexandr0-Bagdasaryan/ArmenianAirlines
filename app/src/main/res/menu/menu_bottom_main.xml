@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="@string/main"
+        android:icon="@drawable/main_icon" />
+    <item
+        android:id="@+id/flightListFragment"
+        android:title="@string/flight_table"
+        android:icon="@drawable/table_icon"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/profile_icon"/>
+</menu>
